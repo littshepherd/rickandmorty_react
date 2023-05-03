@@ -1,6 +1,9 @@
 import styled from 'styled-components'
-const InfoCard = () => {
-   
+const InfoCard = (props) => {
+
+    const informacion = props.info;
+
+    const Lista = informacion.elementos.map( (elemento) => <li>{elemento}</li>)
     return (
         <>
             <CardContainer>
@@ -8,22 +11,20 @@ const InfoCard = () => {
 
             
                 <div>
-                    <h3>¿Que encontraras en la sección de personajes?</h3>
+                    <h3>{informacion.title}</h3>
                 </div>
                 <hr></hr>
                 <div className='seccion'>
-                    <p>En esta sección podras ver la siguiente información de los personajes: </p>
+                    <p>{informacion.texto} </p>
+
                     <ul className='lista'>
-                        <li>Nombre</li>
-                        <li>Estado (vivo o muerto)</li>
-                        <li>Episodios en los que aparece</li>
-                        <li>Imagen del personaje</li>
-                        <li>Ubicación donde fue visto por ultima vez</li>
+                       {Lista}
                     </ul>
+                    
                     <div className='button'>
                          <button>Ver ejemplo</button>
                     </div>
-                    
+                   
                 </div>
             </div>
             </CardContainer>
@@ -38,6 +39,7 @@ const  CardContainer = styled.ul `
     width : 350px;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.5) ;
 }
 .lista {
     padding: 15px;

@@ -1,4 +1,4 @@
-const Character = () => {
+    const Character = () => {
     
     // let resp = fetch("https://rickandmortyapi.com/api/character", {
     //     method: 'GET'
