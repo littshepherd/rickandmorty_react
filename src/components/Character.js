@@ -14,9 +14,10 @@ const Character = () => {
     }   
    
    getData();
-
+    
    return (
     <div>
+       
     </div>
 );
 
