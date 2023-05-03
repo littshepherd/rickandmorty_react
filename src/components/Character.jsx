@@ -17,7 +17,6 @@ const Character = () => {
 
    return (
     <div>
-       
     </div>
 );
 
