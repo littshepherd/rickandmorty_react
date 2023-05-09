@@ -1,6 +1,7 @@
 import './App.css';
 import Character from './components/Character';
 import InfoCards from './components/InfoCards';
+import Slider from './components/Slider';
 
 import Navbar from './components/Navbar';
 
@@ -31,10 +32,11 @@ function App() {
     <div className="App">
 
       <Navbar/>
+      <Slider/>
 
-      <InfoCards info = {infoPersonajes}/>
+      {/* <InfoCards info = {infoPersonajes}/>
 
-     <InfoCards info = {infoEpisodios}/> 
+      <InfoCards info = {infoEpisodios}/>  */}
 
 
       <Character />
