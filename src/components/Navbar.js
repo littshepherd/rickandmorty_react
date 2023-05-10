@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -7,9 +8,9 @@ const Navbar = () => {
         <NavContainer>
             <h2>Rick <span>&</span> Morty <span>Proyecto</span></h2>
             <div>
-              <a href='/'>Inicio</a>
-              <a href='/'>Personajes</a>
-              <a href='/'>Capitulos</a>
+              <Link to= '/'>Inicio</Link>
+              <Link to='/personajes'>Personajes</Link>
+              <Link to='/capitulos'>Capitulos</Link>
             </div>
         </NavContainer>
     </>

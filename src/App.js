@@ -1,45 +1,29 @@
 import './App.css';
 import Character from './components/Character';
-import InfoCards from './components/InfoCards';
-import Slider from './components/Slider';
+import {Home} from './components/container/Home';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { CharacterList} from './components/container/CharacterList';
+import { EpisodeList } from './components/container/EpisodeList';
 
 import Navbar from './components/Navbar';
 
 function App() {
-  const infoPersonajes = {
-    title: "¿Que encontraras en la sección de personajes?",
-    texto: "En esta sección podras ver la siguiente información de los personajes: ",
-    elementos: [ 
-      "Nombre",
-      "estado (vivo o muerto)",
-      "Episodios en los que aparece",
-      "Imagen del personaje",
-      "Ubicación donde fue visto por ultima vez",
-    ],
-  }
-  const infoEpisodios = {
-    title: "¿Que encontraras en la sección de episodios?",
-    texto: "En esta sección podras ver la siguiente información de los episodios: ",
-    elementos: [ 
-      "Nombre de episodio",
-      "Fecha de lanzamiento",
-      "Numero de episodio",
-      "Lista de personajes que aparecen",
-      
-    ]
-  }
+ 
   return (
     <div className="App">
+      <Router>
 
-      <Navbar/>
-      <Slider/>
+        <Navbar/>
 
-      {/* <InfoCards info = {infoPersonajes}/>
+        <Routes>
+          <Route path='/' element= {<Home/>}/>
+          <Route path='/personajes' element = {<CharacterList/>}/>
+          <Route path='/capitulos' element= {<EpisodeList/>}/>
 
-      <InfoCards info = {infoEpisodios}/>  */}
-
-
+        </Routes>
+      </Router>
       <Character />
+      
     </div>
   );
 }
