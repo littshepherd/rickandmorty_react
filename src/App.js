@@ -17,12 +17,11 @@ function App() {
 
         <Routes>
           <Route path='/' element= {<Home/>}/>
-          <Route path='/personajes' element = {<CharacterList/>}/>
+          <Route path='/personajes' element = {<Character/>}/>
           <Route path='/episodios' element= {<EpisodeList/>}/>
 
         </Routes>
       </Router>
-      <Character />
       
     </div>
   );

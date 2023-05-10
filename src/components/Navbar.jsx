@@ -10,7 +10,7 @@ const Navbar = () => {
             <div>
               <Link to= '/'>Inicio</Link>
               <Link to='/personajes'>Personajes</Link>
-              <Link to='/episodios'>Capitulos</Link>
+              <Link to='/episodios'>Episodios</Link>
             </div>
         </NavContainer>
     </>

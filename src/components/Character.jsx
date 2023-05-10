@@ -1,26 +1,39 @@
+import React, {useEffect, useState} from 'react';
+import {getAllCharacters} from '../functions/Functions';
+import '../styles/character.css'
+
 const Character = () => {
-    
-    // let resp = fetch("https://rickandmortyapi.com/api/character", {
-    //     method: 'GET'
-    // }).then(response => response.json()).then(json => console.log(json))
-    let respuesta = '';
-    let getData = async () =>{
-        const resp = await fetch("https://rickandmortyapi.com/api/character", {
-                method: 'GET'
-             }
-        )
-        respuesta = await resp.json()
-        console.log(respuesta)
-    }   
-   
-   getData();
+    const [personajes, setPersonajes] = useState(null);
+    useEffect(() => {
+        getAllCharacters(setPersonajes)
+    }, [])
 
    return (
-    <div className="cardContainer">
-        <img src="" alt="imagen personaje" />
-
-    </div>
-);
+        <>
+                {personajes != null ? (
+                    personajes.map(personaje => (
+                            <div className="contenedorCarta">
+                                <img src={personaje.image} alt="imagen personaje" className='imagenCarta' />
+                                <div className="informacionCarta">
+                                    <h2>{personaje.name}</h2>
+                                    <p>{personaje.status}</p>
+                                    <p>{personaje.gender}</p>
+                                    <button className='botonCarta'>Episodios</button>
+                                </div>
+                            </div>
+                    ))
+                ): ('No se encontró el personaje')}
+        </>
+        /* <div className="contenedorCarta">
+            <img src="" alt="imagen personaje" className='imagenCarta' />
+            <div className="informacionCarta">
+                <h2>Nombre</h2>
+                <p>Estado</p>
+                <p>Genero</p>
+                <button className='botonCarta'>Episodios</button>
+            </div>
+        </div> */
+    );
 
 }
 export default Character;
