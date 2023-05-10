@@ -16,7 +16,9 @@ const Character = () => {
    getData();
 
    return (
-    <div>
+    <div className="cardContainer">
+        <img src="" alt="imagen personaje" />
+
     </div>
 );
 
