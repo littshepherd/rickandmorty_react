@@ -1,7 +1,5 @@
 .contenedorPrincipal  {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid red;
+    overflow: hidden;
 }
 
 .contenedorCarta {
@@ -10,7 +8,8 @@
     max-width: 18rem;
     height: 26rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 5rem 0 0 5rem;
+    margin: 5rem 0 0 2rem;
+    float: left;
     box-sizing: border-box;
     border-radius: 16px;
     transition: all .3s;

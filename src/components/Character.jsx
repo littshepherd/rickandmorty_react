@@ -10,6 +10,7 @@ const Character = () => {
 
    return (
         <>
+            <div className='contenedorPrincipal'>
                 {personajes != null ? (
                     personajes.map(personaje => (
                             <div className="contenedorCarta">
@@ -23,16 +24,8 @@ const Character = () => {
                             </div>
                     ))
                 ): ('No se encontró el personaje')}
-        </>
-        /* <div className="contenedorCarta">
-            <img src="" alt="imagen personaje" className='imagenCarta' />
-            <div className="informacionCarta">
-                <h2>Nombre</h2>
-                <p>Estado</p>
-                <p>Genero</p>
-                <button className='botonCarta'>Episodios</button>
             </div>
-        </div> */
+        </>
     );
 
 }
