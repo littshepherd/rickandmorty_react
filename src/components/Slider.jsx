@@ -1,19 +1,18 @@
 import React from 'react'
 import images from '../exports/images'
 import '../styles/slider.css'
-import { motion } from 'framer-motion'
 
 const Slider = () => {
   return (
-    <motion.div className='slider-container'>
-        <motion.div className='slider' drag = 'x' dragConstraints = {{right:0, left:-8874}}>
+    <div className='slider-container'>
+        <div className='slider'>
             {images.map(image => (
-                <motion.div className='item'>
+                <div className='item'>
                     <img src={image}/>
-                </motion.div>
+                </div>
             ))}
-        </motion.div>
-    </motion.div>
+        </div>
+    </div>
   )
 }
 

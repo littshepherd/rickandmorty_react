@@ -1,0 +1,30 @@
+.contenedorPrincipal {
+    max-width: 80%;
+    margin: 2rem auto;
+}
+
+p span {
+    color: #3de2e0;
+    font-weight: bold;
+}
+
+.contenedorInformacion {
+    display: flex;
+    height: 25rem;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carta {
+    width: 25rem;
+    height: 15rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 0px rgba(0,0,0,0.75);
+    transition: all 0.3s;
+}
+
+.carta:hover {
+    transform: scale(1.05);
+}

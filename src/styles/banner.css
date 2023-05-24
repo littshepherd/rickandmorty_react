@@ -1,0 +1,19 @@
+.contenedorBanner {
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 10rem;
+    background-color: #303030;
+}
+
+.tituloBanner {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 2.5rem;
+    cursor: default;
+    transition: transform .3s;
+}
+
+.tituloBanner:hover {
+    transform: scale(1.2);
+}
