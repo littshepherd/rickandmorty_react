@@ -3,7 +3,6 @@ import Character from './components/Character';
 import {Home} from './components/container/Home';
 import { SearchInput } from './components/SearchInput';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import { CharacterList} from './components/container/CharacterList';
 import { EpisodeList } from './components/container/EpisodeList';
 
 import Navbar from './components/Navbar';

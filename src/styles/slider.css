@@ -6,6 +6,7 @@
 .slider {
     display: flex;
     cursor: grab;
+    animation: displacement 15s infinite alternate linear;
 }
 
 .item {
@@ -17,5 +18,20 @@
 .item img {
     height: 100%;
     width: 100%;
+    display: block;
     pointer-events: none;
+}
+
+@keyframes displacement {
+    0% {margin-left: 0;}
+    20% {margin-left:0;}
+
+    25%{margin-left:-105%;}
+    45%{margin-left:-105%;}
+
+    50%{margin-left:-207%;}
+    70%{margin-left:-207%;}
+
+    75%{margin-left:-312%;}
+    100%{margin-left:-312%;}
 }
