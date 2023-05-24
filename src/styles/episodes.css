@@ -1,0 +1,42 @@
+.main-container{
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    color: white;
+}
+.main-container:hover{
+    transform: scale(1.05);
+}
+.head{
+    height: 2.5rem;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom-style: solid;
+    border-color: rgb(143, 141, 141);
+    border-bottom-width: 1px;
+}
+.body{
+    height: 7rem;
+    padding-top: 1rem;
+}
+.head > span {
+    color: red;
+}
+.button {
+    margin-top: 2rem;
+}
+.button > a{
+    color: white;
+    text-decoration: none;
+    background-color: red;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}

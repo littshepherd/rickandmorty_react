@@ -1,21 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {getAllCharacters} from '../functions/Functions';
-import { SearchInput } from './SearchInput';
 import '../styles/character.css'
 
-const Character = () => {
-    const [personajes, setPersonajes] = useState(null);
+const OnlyCharacter = (props) => {
+    const [personaje, setPersonaje] = useState(null);
     useEffect(() => {
-        getAllCharacters(setPersonajes)
+        setPersonaje(props.info)
     }, [])
 
    return (
         <>
-
             <div className='contenedorPrincipal'>
-                
-                {personajes != null ? (
-                    personajes.map(personaje => (
+                {personaje != null ? (
+              
                             <div className="contenedorCarta">
                                 <img src={personaje.image} alt="imagen personaje" className='imagenCarta' />
                                 <div className="informacionCarta">
@@ -25,11 +21,11 @@ const Character = () => {
                                     <button className='botonCarta'>Episodios</button>
                                 </div>
                             </div>
-                    ))
-                ): ('No se encontró el personaje')}
+                    )
+                : ('Not')}
             </div>
         </>
     );
 
 }
-export default Character;
+export {OnlyCharacter};

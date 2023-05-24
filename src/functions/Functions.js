@@ -23,6 +23,13 @@ const getAllCharacters = async (state) => {
     state(response.data.results);
 }
 
+const getEpisodes=async (state)=>{
+    const response = await axios.get('https://rickandmortyapi.com/api/episode');
+    console.log(response)
+    state(response.data.results)
+
+}
 export {
-    getAllCharacters
+    getAllCharacters,
+    getEpisodes
 }
