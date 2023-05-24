@@ -11,12 +11,13 @@ const Character = () => {
 
    return (
         <>
-
+            <div className='container'>
+            <SearchInput/>
             <div className='contenedorPrincipal'>
                 
                 {personajes != null ? (
                     personajes.map(personaje => (
-                            <div className="contenedorCarta">
+                        <div className="contenedorCarta">
                                 <img src={personaje.image} alt="imagen personaje" className='imagenCarta' />
                                 <div className="informacionCarta">
                                     <h2>{personaje.name}</h2>
@@ -26,7 +27,8 @@ const Character = () => {
                                 </div>
                             </div>
                     ))
-                ): ('No se encontró el personaje')}
+                    ): ('No se encontró el personaje')}
+            </div>
             </div>
         </>
     );

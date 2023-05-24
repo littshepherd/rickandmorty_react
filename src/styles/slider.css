@@ -23,15 +23,16 @@
 }
 
 @keyframes displacement {
-    0% {margin-left: 0;}
-    20% {margin-left:0;}
+    0% {margin-left: -19%;}
+    20% {margin-left: -19%;}
 
-    25%{margin-left:-105%;}
-    45%{margin-left:-105%;}
+    25%{margin-left:-150%;}
+    45%{margin-left:-150%;}
 
-    50%{margin-left:-207%;}
-    70%{margin-left:-207%;}
+    50%{margin-left:-280%;}
+    70%{margin-left:-280%;}
 
-    75%{margin-left:-312%;}
-    100%{margin-left:-312%;}
+    75%{margin-left:-415%;}
+    100%{margin-left:-415%;}
 }
+  
